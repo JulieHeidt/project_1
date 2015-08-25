@@ -1,0 +1,82 @@
+body{
+	color: #f2f2f2;
+	background-color: #333;
+
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border:thin solid black;
+  position: absolute; /*  in order to move it has to be absolute*/
+  transition: all 1s ease;
+}
+
+.start {
+	top: 0px;
+	left: 50%;
+	margin-left: -20px;
+}
+
+.left{
+	top: 450px;
+	left: 70px;
+}
+.center{
+	top: 450px;
+	left: 50%;
+	margin-left: -20px;
+}
+.right{
+	top: 450px;
+	left: 100%;
+	margin-left: -110px;
+}
+
+#left{
+	background-color: blue;
+}
+#center {
+	background-color: yellow;
+}
+#right {
+	background-color: red;
+}
+
+.floor {
+	background-color: #ddd;
+	height: 570px;
+	width: 700px;
+/*	display: inline-block;*/
+	position: relative;
+	
+}
+
+.dance {
+	position: absolute;
+	left: 50%;
+	margin-left: -350px;
+}
+.header {
+	text-align: center;
+
+}
+
+#begin{
+	font-size: 24px;
+	border:2px solid #fff; 
+	color: #fff;
+	width: 150px;
+	height: 60px;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	bottom: 10px;
+	text-align: center;
+}
+
+#begin:hover{
+	background: #fff;
+	border:2px solid #fff; 
+	color: #333;
+}
