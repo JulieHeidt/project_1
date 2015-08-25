@@ -26,12 +26,19 @@
 // });
 
 var kickStart = document.getElementById("begin").addEventListener("click", function(){
-	var left = document.getElementById("left");
+	// var left = document.getElementById("left");
 	var center = document.getElementById("center");
 	var right = document.getElementById("right");
-	left.classList.add("left");
+	// left.classList.add("left");
 	center.classList.add("center");
 	right.classList.add("right");
 });
+
+function createTile(){
+	$(".floor").append("<div class='square start left' id='left'></div>");
+
+}
+
+
 
 // function checkForWinner(){
