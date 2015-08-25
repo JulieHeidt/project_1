@@ -5,11 +5,13 @@ body{
 }
 
 .square {
-  width: 40px;
+  width: 80px;
   height: 40px;
   border:thin solid black;
   position: absolute; /*  in order to move it has to be absolute*/
   transition: all 1s ease;
+  opacity: 0;
+  border-radius: 80px;
 }
 
 .start {
@@ -21,24 +23,30 @@ body{
 .left{
 	top: 450px;
 	left: 70px;
+	opacity: 1;
 }
 .center{
 	top: 450px;
 	left: 50%;
 	margin-left: -20px;
+	opacity: 1;
 }
+
 .right{
 	top: 450px;
 	left: 100%;
 	margin-left: -110px;
+	opacity: 1;
 }
 
 #left{
 	background-color: blue;
 }
+
 #center {
 	background-color: yellow;
 }
+
 #right {
 	background-color: red;
 }
@@ -56,10 +64,11 @@ body{
 	position: absolute;
 	left: 50%;
 	margin-left: -350px;
+/*	display: none;*/
 }
+
 .header {
 	text-align: center;
-
 }
 
 #begin{
