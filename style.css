@@ -1,7 +1,31 @@
 body{
 	color: #f2f2f2;
 	background-color: #333;
+	font-family: 'helvetica', arial;
+}
 
+.header {
+	text-align: center;
+	margin-bottom: 30px;
+	font-family: 'Monoton', cursive;
+	font-size: 45px;
+}
+
+.dance {
+	position: absolute;
+	left: 50%;
+	margin-left: -350px;
+	margin-top: 80px;
+	overflow: hidden;
+	top: 20px;
+}
+
+.floor {
+	background-color: #ddd;
+	height: 570px;
+	width: 700px;
+	position: relative;
+	top: 0px;
 }
 
 .square {
@@ -9,33 +33,33 @@ body{
   height: 40px;
   border:thin solid black;
   position: absolute; /*  in order to move it has to be absolute*/
-  transition: all 1s ease;
+  transition: all 2s ease;
   opacity: 0;
   border-radius: 80px;
+/*  overflow: hidden;*/
 }
 
 .start {
-	top: 0px;
 	left: 50%;
 	margin-left: -20px;
 }
 
 .left{
 	top: 450px;
-	left: 70px;
+	left: 65px;
 	opacity: 1;
 }
 .center{
 	top: 450px;
 	left: 50%;
-	margin-left: -20px;
+	margin-left: -35px;
 	opacity: 1;
 }
 
 .right{
 	top: 450px;
 	left: 100%;
-	margin-left: -110px;
+	margin-left: -130px;
 	opacity: 1;
 }
 
@@ -51,35 +75,15 @@ body{
 	background-color: red;
 }
 
-.floor {
-	background-color: #ddd;
-	height: 570px;
-	width: 700px;
-/*	display: inline-block;*/
-	position: relative;
-	
-}
-
-.dance {
-	position: absolute;
-	left: 50%;
-	margin-left: -350px;
-/*	display: none;*/
-}
-
-.header {
-	text-align: center;
-}
-
 #begin{
-	font-size: 24px;
+	font-size: 20px;
 	border:2px solid #fff; 
 	color: #fff;
 	width: 150px;
-	height: 60px;
+	height: 50px;
 	position: absolute;
 	left: 50%;
-	margin-left: -75px;
+	margin-left: -75px;	
 	bottom: 10px;
 	text-align: center;
 }
@@ -89,3 +93,53 @@ body{
 	border:2px solid #fff; 
 	color: #333;
 }
+
+.dot{
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: absolute;
+	top: -100px;
+	transition: top 2s ease-in-out;
+}
+
+.move {
+	top: 600px;
+}
+
+/*dotOne {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+}
+
+.dotTwo {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+	left: 50%;
+	margin-left: -35px;
+}
+
+.dotThree {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+	left: 100%;
+	margin-left: -130px;
+}
+
+*/
