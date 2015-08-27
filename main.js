@@ -55,8 +55,20 @@ function gameOn(key){
 }
 
 var Dot = function(){
-	this.element="<div class='dot' id='dotOne'></div>"
+	this.element="<div class='dot ball' id='dotOne'></div>"
+	$(".dot").addClass("move");
 }
+
+var Dot = function(){
+	this.element="<div class='dot ball' id='dotTwo'></div>"
+	$(".dot").addClass("move");
+}
+
+var Dot = function(){
+	this.element="<div class='dot ball' id='dotThree'></div>"
+	$(".dot").addClass("move");
+}
+
 var dot = new Dot();
 function fallingDots(){
 	$(".floor").append(dot.element);
@@ -65,14 +77,8 @@ fallingDots();
 
 
 $("#begin").on("click", function(){
-	for (var i = 0; i < 30; i++) {	
-		setInterval(function(){	
-			
-			$(".dot").addClass("move"); //don't need to add (.)knows its already a class
-		}, 500);
-	};	
+	$(".dot").addClass("move"); //don't need to add (.)knows its already a class
 });
-
 
 var ballfall = document.getElementsByClassName("dot")[0];
 console.log(ballfall.getBoundingClientRect())
