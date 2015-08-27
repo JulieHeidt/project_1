@@ -34,10 +34,11 @@ $(".dot").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd
 });
 
 //if statement to check if position of dot within the position of "fixed" square
-// function checkCollision( key ){
+
+function checkCollision( key ){
 
 
-// }​
+}​
 	
 	// Look to see if ANY .dot is in 'dotPosition'[key]
 	// 	//loop through all dots on screen
@@ -77,6 +78,7 @@ function gameOn(key){
 	}
 }
 
+// <<<<<<< HEAD
 
 
 
@@ -84,6 +86,26 @@ function createTile( loc ){
 	$(".floor").append("<div class='square start'></div>");
 	$("#"+loc).addClass(loc);
 	console.log( loc + " tile")
+// =======
+// var Dot = function(){
+// 	this.element="<div class='dot ball' id='dotOne'></div>"
+// 	$(".dot").addClass("move");
+// }
+
+// var Dot = function(){
+// 	this.element="<div class='dot ball' id='dotTwo'></div>"
+// 	$(".dot").addClass("move");
+// }
+
+// var Dot = function(){
+// 	this.element="<div class='dot ball' id='dotThree'></div>"
+// 	$(".dot").addClass("move");
+// }
+
+// var dot = new Dot();
+// function fallingDots(){
+// 	$(".floor").append(dot.element);
+// >>>>>>> f99a807d28b8323893c08c56274b4e7523d63a7f
 }
 
 createTile("left");
@@ -96,8 +118,18 @@ createTile("right");
 
 
 
+// <<<<<<< HEAD
 
 
+// =======
+// $("#begin").on("click", function(){
+// 	$(".dot").addClass("move"); //don't need to add (.)knows its already a class
+// });
+
+// var ballfall = document.getElementsByClassName("dot")[0];
+// console.log(ballfall.getBoundingClientRect())
+// console.log("hi")
+// >>>>>>> f99a807d28b8323893c08c56274b4e7523d63a7f
 
 
 
