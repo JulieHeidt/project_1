@@ -1,19 +1,61 @@
-var player 
+// var score = 
+var playerOne = 0;
+// var playerTwo = 0;
 
 $("#begin").click(function(){
 	console.log("hello");
 });
 
+
 document.addEventListener("keydown", function(event){
 	key = event.which;
 	if(key===65 || key===83 || key===68 || key===74 || key===75 || key===76){
-		// $left.offset() === div.offset();
 	console.log("hit");	
+	checkCollision();
 	}
+	gameOn(key);
+	//calling this function inside allows me to access key variable in next function..
 });
 
+//if statement to check if position of dot within the position of "fixed" square
+function checkCollision(){
+	var dotPosition = document.getElementById("dotOne").getBoundingClientRect().top
+	if(dotPosition >= 500 && dotPosition <= 600){
+	console.log("add a point");
+	playerOne++
+	}
+	else {
+	playerOne--
+	}
+}
+
+
+//Assigning keys in a switch statement
+function gameOn(key){
+	switch(key){
+	case 65:  //if key equals (case) in this instance 65
+		console.log("you have clicked A");
+		break;
+	case 83:
+		console.log("you have clicked B");
+		break;
+	case 68:  
+		console.log("you have clicked C");
+		break;
+	case 74:  
+		console.log("you have clicked J");
+		break;
+	case 75:  
+		console.log("you have clicked K");
+		break;
+	case 76:  
+		console.log("you have clicked L");
+		break;
+	}
+}
+
 var Dot = function(){
-	this.element="<div class='dot'></div>"
+	this.element="<div class='dot' id='dotOne'></div>"
 }
 var dot = new Dot();
 function fallingDots(){
@@ -21,6 +63,20 @@ function fallingDots(){
 }
 fallingDots();
 
+
+$("#begin").on("click", function(){
+	for (var i = 0; i < 30; i++) {	
+		setInterval(function(){	
+			
+			$(".dot").addClass("move"); //don't need to add (.)knows its already a class
+		}, 500);
+	};	
+});
+
+
+var ballfall = document.getElementsByClassName("dot")[0];
+console.log(ballfall.getBoundingClientRect())
+console.log("hi")
 
 document.getElementById("left").addEventListener("keyDown", goalPiece);
 	function goalPiece(){
@@ -34,127 +90,56 @@ document.getElementById("right").addEventListener("keyDown", goalPiece);
 	function goalPiece(){
 	console.log("kjf");
 	}
-// document.getElementById("one").addEventListener("keyDown", counter);
-// 	function counter(){
-// 	console.log("oneee");	
-// 	}
-// document.getElementById("two").addEventListener("keyDown", counter);
-// 	function counter(){
-// 	console.log("oneee");
-// 	}
-// document.getElementById("three").addEventListener("keyDown", counter);
-// 	function counter(){
-// 	console.log("oneee");
-// 	}
-
-// listen for animation start
-// dot.addEventListener("animationstart",function(drop){
-//     console.log("dot one animation is working");
-// },false);
-
-// two.addEventListener("animationstart",function(? event){
-//     console.log("dot two animation is working");
-// },false);
-
-// three.addEventListener("animationstart",function(){
-//     console.log("dot three animation is working");
-// },false);
 
 
 
-// function fallingDots(){
-
-// 	for (var i = 0; i < ; ++i) {
-
-
-// function isCollide (a, b) {
-//     return (
-//         b.y >= a.y && b.y <= a.y + a.height
-//         add to b.y to make game "easier"---don't need to watch for x
-//     );
+// // full screen mode-->
+// var game = $('.dance')[0];
+// function launchIntoFullscreen(element) {
+//   if(element.requestFullscreen) {
+//     element.requestFullscreen();
+//   } else if(element.mozRequestFullScreen) {
+//     element.mozRequestFullScreen();
+//   } else if(element.webkitRequestFullscreen) {
+//     element.webkitRequestFullscreen();
+//   }
 // }
-
-
-
-// full screen mode-->
-var game = $('.dance')[0];
-function launchIntoFullscreen(element) {
-  if(element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  }
-}
-$('#begin').click(function(){
-    $(game).show();
-    launchIntoFullscreen(game);
-}); 
-$(document).bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
-    var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
-    var e = state ? 0 : 1 ;
-    if (e === 1){
-        $(game).hide();  
-    }
-});
-//end full screen mode
-
+// $('#begin').click(function(){
+//     $(game).show();
+//     launchIntoFullscreen(game);
+// }); 
+// $(document).bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
+//     var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
+//     var e = state ? 0 : 1 ;
+//     if (e === 1){
+//         $(game).hide();  
+//     }
+// });
+// //end full screen mode
 
 function createLeftTile(){
 	$(".floor").append("<div class='square start'></div>");
 	$("#left").addClass("left");
 	console.log("sucks")
 }
+createLeftTile();
+
 function createCenterTile(){
 	$(".floor").append("<div class='square start'></div>");
 	$("#center").addClass("center");
 }
+createCenterTile();
+
 function createRightTile(){
 	$(".floor").append("<div class='square start'></div>");
 	$("#right").addClass("right");
 }
+createRightTile();
+
+
+// write a function on keydown that checks the top of each object to see if they are the same
 
 
 
-// function restartgame(){
-// 	createLeftTile();
-// 	createCenterTile();
-// 	createRightTile();
-// 	window.location.reload();
-// }
-
-// document.querySelector("").addEventListener("click", );
-// function (){
-// 	for(var i = 0; i < ??.length; i++){
-// 		??[i].innerHTML = "";
-// 		console.log(i);
-// 	}
-// }
-
-// $( "" ).keyDown(function( event ) {
-//   console.log( "clicked: " + event.target );
-// });
 
 
-// var p1Click = new Audio("find sound");
-// var p2Click = new Audio("findsound");
-
-// $(window).on("keydown", function(event){
-// 	console.log(event.which);
-// 	if(event.which === "a" || "){
-// 		console.log("p1");
-// 		p1Click.play();
-
-// 	}else if(event.which === ?){
-// 		console.log("p2");
-// 		p1Click.play();
-
-// 	}// else if(event.which === )
-
-// });
-
-
-//While function, add new dot, fall...add position with jquery
-
-// function checkForWinner(){
