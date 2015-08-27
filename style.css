@@ -99,11 +99,47 @@ body{
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	position: relative;
+	position: absolute;
 	top: -100px;
 	transition: top 2s ease-in-out;
 }
+
 .move {
 	top: 600px;
 }
 
+/*dotOne {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+}
+
+.dotTwo {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+	left: 50%;
+	margin-left: -35px;
+}
+
+.dotThree {
+	background-color: black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	position: relative;
+	top: -100px;
+	transition: top 2s ease-in-out;
+	left: 100%;
+	margin-left: -130px;
+}
+
+*/
