@@ -35,10 +35,10 @@ $(".dot").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd
 
 //if statement to check if position of dot within the position of "fixed" square
 
-function checkCollision( key ){
+// function checkCollision (key){
+// 	console.log('test');
 
-
-}​
+// }​
 	
 	// Look to see if ANY .dot is in 'dotPosition'[key]
 	// 	//loop through all dots on screen
