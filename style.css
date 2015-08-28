@@ -108,38 +108,16 @@ body{
 	top: 600px;
 }
 
-/*dotOne {
-	background-color: black;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	position: relative;
-	top: -100px;
-	transition: top 2s ease-in-out;
+.loc65{
+	margin-left: -130px;
 }
 
-.dotTwo {
-	background-color: black;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	position: relative;
-	top: -100px;
-	transition: top 2s ease-in-out;
-	left: 50%;
+.loc83{
 	margin-left: -35px;
 }
 
-.dotThree {
-	background-color: black;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	position: relative;
-	top: -100px;
-	transition: top 2s ease-in-out;
+.loc68{
 	left: 100%;
 	margin-left: -130px;
 }
 
-*/
