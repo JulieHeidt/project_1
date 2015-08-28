@@ -2,15 +2,19 @@ var scores = {
 	playerOne: 0,
 	playerTwo: 0,
 };
-
 //my function constructor for my dots (falling balls)
+var currPlayer = "player 1";
 var Dot = function(){
 	this.element = $( "<div class='dot'></div>" );
-	var self = this.element;
 };
 
 Dot.prototype.addToGame = function(){
 	$('.floor').append(this.element);
+	var self = this.element;
+	self.on('click', function(){
+		self.hide();
+		console.log('hit');
+	}); 
 }
 
 //created gloal variables for 3 columns of balls
@@ -54,8 +58,7 @@ $("#begin").click(function(){
 			makeRandom(ball.element);
 			move(ball.element);
 		}, 100 );
-	},1000)
-
+	},2000)
 });
 
 //keydown function to watch for balls falling between 500-600 using offset
@@ -69,11 +72,13 @@ function keyDown(e){
 	};
 }
 
+
+
 //Create dance floor tiles
  function createLeftTile(){
  	$(".floor").append("<div class='square start'></div>");
  	$("#left").addClass("left");
- 	console.log("sucks")
+ 	console.log("I got tiles")
  }
 createLeftTile();
 
@@ -90,5 +95,14 @@ function createRightTile(){
 createRightTile();
 
 $("body").on("keydown", keyDown);
+$("body").on("keydown", function(event){
+	key = event.which;
+	if(key===65 || key===83 || key===68) {
+		console.log("hit");	
+	}
+});
+
+
+
 
 

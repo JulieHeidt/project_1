@@ -1,17 +1,31 @@
-# project_1
+**Dance Dance Revolution**
+
+Dance Dance Revolution game with music and key down with moving items.
+
+user stories: kids to adults
 
 Each user gets the same song and 30 seconds to play. Get points for accurate hits and docked points for hits off beat.
 
 1. 3 keys - asd & jkl  -- add styles with different colors with event listener to bold 
 2. key down on beat--> 
 3. 2 players
-4. array of multiple dots? position of dots--> collision
-5. collision function--dots & square: when dot and square are at same point when keydown-->add point-->pop into an array??
-4. add health
-5. add event listener for key down--Key is clicked at time of collision
-5. start music on click have key down arguments at certain points in the music at time elapsed at time of game.
-6. Add function to see if key down happened at the right time...
-7. Points for correct key down, negative point for wrong hit. ?? 
-8. Tracking points? pop points into an array?
-9. Set interval function--iterates certain amount of time during the animation.
-6. function reset
+4. Using CSS transitions create multiple balls that fall above and onto a tile. Player must hit the keydown 
+5. collision function
+6. Add function to check if key down happened at the right time...
+7. Tracking points? pop points into an array?
+8. function reset
+
+Issues that came up in the game
+
+1. Struggled with collision. I was able to create one one ball and get the collison on key down. I was struggling adding the collision to multiple balls.
+2. Timing issues with css animations--used timeouts, set timer
+
+What I learned
+1. KISS - working on layout
+2. Function constructors, css animations, collision (sortof), Switch statements
+
+What NEXT?
+
+1. finish the game
+2. get winner
+3. hibernate this weekend

@@ -21,7 +21,7 @@ body{
 }
 
 .floor {
-	background-color: #ddd;
+	background: #ddd;
 	height: 570px;
 	width: 700px;
 	position: relative;
@@ -101,8 +101,9 @@ body{
 	border-radius: 40px;
 	position: absolute;
 	top: -100px;
-	transition: top 2s;
+	transition: top 3s;
 	z-index: 9999;
+	cursor: pointer;
 }
 
 .move {
