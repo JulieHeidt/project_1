@@ -17,7 +17,7 @@ Dot.prototype.addToGame = function(){
 	}); 
 }
 
-//created gloal variables for 3 columns of balls
+//created global variables for 3 columns of balls
 var dotsLeft = new Dot();
 var dotsRight = new Dot();
 var dotsCenter = new Dot();
