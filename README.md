@@ -30,3 +30,4 @@ What's NEXT?
 2. get winner
 3. hibernate this weekend
 4. Download Wrecking Ball
+5. Learn words to Party In The USA for Karaoke
