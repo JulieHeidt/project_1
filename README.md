@@ -24,8 +24,9 @@ What I learned
 1. KISS - working on layout
 2. Function constructors, css animations, collision (sortof), Switch statements
 
-What NEXT?
+What's NEXT?
 
 1. finish the game
 2. get winner
 3. hibernate this weekend
+4. Download Wrecking Ball
